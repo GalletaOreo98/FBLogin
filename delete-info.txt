@@ -1,0 +1,1 @@
+No guardamos información, solo es para tu uso y visualización, puedes borrar tus datos en el localStorage de tu navegador
