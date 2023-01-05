@@ -15,7 +15,7 @@
   <script type="text/javascript">
     function onTelegramAuth(user) {
       alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-      const data_check_string = `auth_date=${user.auth_date}\nfirst_name=${user.first_name}\nid=${user.id}\nusername=${user.username}`;
+      const data_check_string = `auth_date=${user.auth_date}\nfirst_name=${user.first_name}\nid=${user.id}\nusername=${user.username}\nhash =${user.hash}`;
       console.log(data_check_string);
     }
   </script>
