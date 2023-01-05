@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Login</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login</title>
 </head>
+
 <body>
 
-  <script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-login="OfficialNavi_bot" data-size="large" data-radius="20" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+  <script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-login="OfficialNavi_bot"
+    data-size="large" data-radius="20" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
   <script type="text/javascript">
     function onTelegramAuth(user) {
       alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+      const data_check_string = `auth_date=${user.auth_date}\nfirst_name=${user.first_name}\nid=${user.id}\nusername=${user.username}`;
+      console.log(data_check_string);
     }
   </script>
 
-<fb:login-button 
+  <!-- <fb:login-button 
 scope="public_profile,email"
 onlogin="checkLoginState();">
 </fb:login-button>
@@ -48,6 +53,7 @@ onlogin="checkLoginState();">
        js.src = "https://connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
-  </script>
+  </script> -->
 </body>
+
 </html>
